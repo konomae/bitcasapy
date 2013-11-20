@@ -1,9 +1,10 @@
-# Bitcasa Python Client (Unofficial)
+# Bitcasa API Python Client (Unofficial)
 
 
 ## Requirements
 
 - Tested with Python 2.7.6 and Python 3.3.2 on Mac OS X 10.9
+- Bitcasa API v1
 - requests v1.x
 - rauth
 
@@ -15,6 +16,8 @@ $ pip install -r requirements.txt
 
 
 ## Get Access Token
+
+First, register your app in [Bitcasa API Console](https://developer.bitcasa.com/admin/applications)
 
 ```bash
 $ export BITCASA_CLIENT_ID="<your_client_id>"
