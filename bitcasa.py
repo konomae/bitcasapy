@@ -19,4 +19,4 @@ class BitcasaClient(OAuth2Session):
         if 'access_token' not in params and self.access_token:
             params['access_token'] = self.access_token
             req_kwargs['params'] = params
-        return super(BitcasaClient, self).request(method, url, **req_kwargs)
+        return super(BitcasaClient, self).request(method, url, bearer_auth=bearer_auth, **req_kwargs)
