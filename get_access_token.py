@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # coding: utf-8
 import os
 try:
@@ -24,7 +25,11 @@ def main():
     authorization_url = oauth.get_authorize_url()
     print('Please go to %s and authorize access.' % authorization_url)
 
-    authorization_response = input('Enter the full callback URL: ')
+    try:
+        authorization_response = raw_input('Enter the full callback URL: ')
+    except NameError:
+        authorization_response = input('Enter the full callback URL: ')
+
     query = urlparse.urlparse(authorization_response).query
     params = dict(urlparse.parse_qsl(query))
 
