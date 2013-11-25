@@ -53,6 +53,9 @@ $ export BITCASA_CLIENT_SECRET="<your_client_secret>"
 $ export BITCASA_ACCESS_TOKEN="<your_access_token>"
 $ python example.py
 (list bitcasa folders)
+
+$ python upload.py
+(upload upload.py to infinite drive)
 ```
 
 BitcasaClient built on rauth's OAuth2Session. OAuth2Session built on requests's Session.
