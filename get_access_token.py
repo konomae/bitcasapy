@@ -27,7 +27,7 @@ def main():
 
     try:
         authorization_response = raw_input('Enter the full callback URL: ')
-    except:
+    except NameError:
         authorization_response = input('Enter the full callback URL: ')
 
     query = urlparse.urlparse(authorization_response).query
