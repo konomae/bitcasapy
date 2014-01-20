@@ -1,6 +1,6 @@
 # coding: utf-8
+from __future__ import print_function
 import os
-from pprint import pprint
 from bitcasa import BitcasaClient
 
 
@@ -14,8 +14,9 @@ def main():
     assert access_token, 'Please set "BITCASA_ACCESS_TOKEN".'
 
     bitcasa = BitcasaClient(client_id, client_secret, access_token)
-    r = bitcasa.get('folders/', params={'depth': 1})
-    pprint(r.json())
+    items = bitcasa.list_item()
+    for i in items:
+        print(i.name)
 
 
 if __name__ == '__main__':

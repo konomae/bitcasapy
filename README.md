@@ -41,11 +41,12 @@ client_secret = '<your_client_secret>'
 access_token = '<your_access_token>'
 
 bitcasa = BitcasaClient(client_id, client_secret, access_token)
-r = bitcasa.get('folders/', params={'depth': 1})
-print r.json()
+items = bitcasa.list_item()
+for i in items:
+    print(i.name)
 ```
 
-### Run example.py
+### Run example
 
 ```bash
 $ export BITCASA_CLIENT_ID="<your_client_id>"
